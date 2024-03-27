@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalProject.Views.FinancePage"
+             Title="FinancePage"
+           NavigationPage.HasNavigationBar="False"
+             Appearing="ContentPage_Appearing"
+             Padding="5"
+             BackgroundColor="Black"
+             >
+    <ScrollView>
+        <VerticalStackLayout Spacing="10">
+        <Label Text="Report" VerticalOptions="Center" HorizontalOptions="Center" FontSize="33" TextColor="#0062F0"/>
+            <Border Stroke="#0062F0" HeightRequest="330" StrokeShape="RoundRectangle 35" StrokeThickness="3" Padding="20" BackgroundColor="Black">
+            <Border.Shadow>
+                <Shadow Brush="DarkBlue"
+                             Opacity=".6" 
+                            Offset="0,15"/>
+            </Border.Shadow>
+            <Grid ColumnSpacing="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1.2*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+
+                <Label Text="Expenses" TextColor="DarkRed" FontSize="28"
+                       VerticalOptions="Center" HorizontalOptions="Center"/>
+                <Label x:Name="Expense1Label" TextColor="Gray" Text="hi" Grid.Column="1" 
+                       HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Line HeightRequest=".3" VerticalOptions="End" BackgroundColor="Grey"/>
+                    <Label x:Name="Expense2Label" TextColor="Gray" Text="hi" Grid.Row="1" 
+                       HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Label x:Name="Expense3Label" TextColor="Gray" Text="hi" Grid.Row="1" Grid.Column="1" 
+                       HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Label x:Name="Expense4Label" TextColor="Gray" Text="hi" Grid.Row="2"
+                       HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Label x:Name="Expense5Label" TextColor="Gray" Text="hi" Grid.Row="2" Grid.Column="1"
+                       HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Label x:Name="Expense6Label" TextColor="Gray" Text="hi" Grid.Row="3" 
+                       HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Label x:Name="Expense7Label" TextColor="Gray" Text="hi" Grid.Row="3" Grid.Column="1"
+                       HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Label x:Name="Expense8Label" TextColor="Gray" Text="hi" Grid.Row="4" 
+                       HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Label x:Name="Expense9Label" TextColor="Gray" Text="hi" Grid.Row="4" Grid.Column="1"
+                       HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Label x:Name="Expense10Label" TextColor="Gray" Text="hi" Grid.Row="5"
+                       HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Label x:Name="Expense11Label" TextColor="Gray" Text="hi" Grid.Row="5" Grid.Column="1"
+                       HorizontalOptions="Center" VerticalOptions="Center"/>
+
+                </Grid>
+        </Border>
+
+            <Border Stroke="#0062F0" HeightRequest="250" StrokeShape="RoundRectangle 35" StrokeThickness="3" Padding="20" BackgroundColor="Black">
+                <Border.Shadow>
+                    <Shadow Brush="DarkBlue"
+                             Opacity=".6" 
+                            Offset="0,15"/>
+                </Border.Shadow>
+                <Grid ColumnSpacing="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1.2*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+
+                    <Label Text="Income" TextColor="DarkGreen" FontSize="28" 
+                       VerticalOptions="Center" HorizontalOptions="Center"/>
+                    <Line HeightRequest=".3" VerticalOptions="End" BackgroundColor="Grey"/>
+
+                    <Label x:Name="Income1Label" TextColor="Gray" Text="hi" Grid.Row="1" 
+                       HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Label x:Name="Income2Label" TextColor="Gray" Text="hi" Grid.Row="1" Grid.Column="1"
+                       HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Label x:Name="Income3Label" TextColor="Gray" Text="hi" Grid.Row="2"
+                       HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Label x:Name="Income4Label" TextColor="Gray" Text="hi" Grid.Row="2" Grid.Column="1"
+                       HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Label x:Name="Income5Label" TextColor="Gray" Text="hi" Grid.Row="3"
+                       HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Label x:Name="Income6Label" TextColor="Gray" Text="hi" Grid.Row="3" Grid.Column="1"
+                       HorizontalOptions="Center" VerticalOptions="Center"/>
+
+                </Grid>
+            </Border>
+
+
+            <!--<Label x:Name="TestLabel" Text="hi" VerticalOptions="Center" HorizontalOptions="Center"/>
+        <Label x:Name="Test2Label" Text="hi" VerticalOptions="Center" HorizontalOptions="Center"/>-->
+
+    </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

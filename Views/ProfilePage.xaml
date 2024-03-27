@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalProject.Views.ProfilePage"
+              xmlns:shapes="clr-namespace:Microsoft.Maui.Controls.Shapes;assembly=Microsoft.Maui.Controls"
+             Title="ProfilePage"
+             NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <LinearGradientBrush x:Key="PageBackground" StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#75B8FF" Offset="0" />
+                <GradientStop Color="#75B8FF" Offset="0.34"/>
+                <GradientStop Color="#75B8FF" Offset="0.51"/>
+                <GradientStop Color="#082C92" Offset="0.68"/>
+                <GradientStop Color="#0D1F2D" Offset="0.95"/>
+                <GradientStop Color="#0D1F2D" Offset="1"/>
+            </LinearGradientBrush>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Background>
+        <StaticResource Key="PageBackground" />
+    </ContentPage.Background>
+    <VerticalStackLayout>
+        <ListView x:Name="functionsListView"/>
+
+        <StackLayout Grid.Row="0"
+                             VerticalOptions="Start"
+                             Padding="100"
+                             Margin="0,-15,0,0">
+
+                    <Image
+                              Source="logo.jpeg"
+                        Opacity="0.8"
+                              Aspect="AspectFill"
+                              Margin="0,0,0,10"
+                              Grid.Column="1"
+                              WidthRequest="200"
+                              HeightRequest="201"
+                              HorizontalOptions="End"
+                              VerticalOptions="Center">
+                          <Image.Clip>
+                              <shapes:EllipseGeometry Center="100, 110"
+                              RadiusX="100"
+                              RadiusY="110"/>
+                          </Image.Clip>
+                    </Image>
+            </StackLayout>
+
+
+    </VerticalStackLayout>
+</ContentPage>

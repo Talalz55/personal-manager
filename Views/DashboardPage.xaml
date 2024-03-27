@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalProject.Views.DashboardPage"
+             Title="Dashboard"
+             BackgroundColor="Black"
+             Padding="10"
+             NavigationPage.HasNavigationBar="False"
+             Appearing="ContentPage_Appearing"
+             >
+    <Grid RowSpacing="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.3*"/>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <VerticalStackLayout Grid.Column="1" Spacing="10">
+            <Label Text="Finance" HorizontalTextAlignment="Center" TextColor="#0062F0" FontSize="30"/>
+            <Border Stroke="#0062F0" HeightRequest="200" StrokeShape="RoundRectangle 35" StrokeThickness="3" Padding="10" BackgroundColor="Black">
+                <Border.Shadow>
+                    <Shadow Brush="DarkBlue"
+                             Opacity=".6"
+                            Offset="0,15"/>
+                </Border.Shadow>
+                <Grid ColumnSpacing="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label x:Name="LastEarningLabel" FontSize="27"  HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>
+                    <Label x:Name="LastExpenseLabel" FontSize="27"  HorizontalOptions="Center" VerticalOptions="Center"
+                           FontAttributes="Bold" Grid.Column="1"/>
+                <Line Grid.Row="1" BackgroundColor="DimGrey" Grid.ColumnSpan="2" VerticalOptions="Start" HeightRequest="1"/>
+                <Label x:Name="BalanceLabel" FontSize="27"  TextColor="Green" Grid.Row="1" Grid.ColumnSpan="2"
+                       HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>
+                    <Button x:Name="EarningsButton" BackgroundColor="Transparent" CornerRadius="30" Clicked="EarningsButton_Clicked"></Button>
+                    <Button x:Name="ExpensesButton" BackgroundColor="Transparent" CornerRadius="30" Grid.Column="1" Clicked="ExpensesButton_Clicked"></Button>
+                </Grid>
+        </Border>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout x:Name="YesReminders" Grid.Column="1" Grid.Row="1" Spacing="10" IsVisible="true">
+            <Label Text="Reminder" HorizontalTextAlignment="Center" TextColor="#0062F0" FontSize="30"/>
+            <Border Stroke="#0062F0" HeightRequest="130" StrokeShape="RoundRectangle 35" StrokeThickness="3" Padding="15" BackgroundColor="Black">
+                <Grid ColumnSpacing="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2.5*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label x:Name="ReminderTitleLabel" Text="+28sWAACJKCCwrerebwave" FontSize="20"  TextColor="MediumPurple" HorizontalOptions="Center" Grid.RowSpan="2"
+                           VerticalOptions="Center" FontAttributes="Bold"/>
+                    <Label x:Name="DateLabel" Text="28 APR" FontSize="16" TextColor="Gray" FontAttributes="Bold"
+                           HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="1"/>
+                    <Line Grid.Row="1" BackgroundColor="DimGrey"  VerticalOptions="Start" HeightRequest="1" Grid.Column="1" />
+                    <Line BackgroundColor="DimGrey"  VerticalOptions="Start" WidthRequest="1" Grid.Column="1"
+                          HorizontalOptions="Start" Grid.RowSpan="2" />
+                    <Label x:Name="TimeLabel" Text="18:00" FontSize="16"  TextColor="Gray" Grid.Row="1" Grid.Column="1" FontAttributes="Bold"
+                       HorizontalOptions="Center" VerticalOptions="Center"/>
+                </Grid>
+            </Border>
+        </VerticalStackLayout>
+        <VerticalStackLayout x:Name="NoReminders" Grid.Column="1" Grid.Row="1" Spacing="10" IsVisible="false">
+            <Label Text="Reminder" HorizontalTextAlignment="Center" TextColor="#0062F0" FontSize="30"/>
+            <Border Stroke="#0062F0" HeightRequest="130" StrokeShape="RoundRectangle 35" StrokeThickness="3" Padding="15" BackgroundColor="Black">
+                <Label Text="No reminders yet" FontSize="25" TextColor="DimGray" HorizontalOptions="Center"
+                           VerticalOptions="Center" FontAttributes="Bold"/>
+            </Border>
+        </VerticalStackLayout>
+        <Button x:Name="RemindersButton" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Text="View all>" TextColor="DimGrey"
+                BackgroundColor="Transparent" HeightRequest="50" WidthRequest="90" Clicked="RemindersButton_Clicked"
+                VerticalOptions="Start" HorizontalOptions="End"/>
+
+        <VerticalStackLayout x:Name="YesNotes" Grid.Column="1" Grid.Row="2" Spacing="10" VerticalOptions="Start" IsVisible="false">
+            <Label Text="Note" HorizontalTextAlignment="Center" TextColor="#0062F0" FontSize="30"/>
+            <Border Stroke="#0062F0" HeightRequest="130" StrokeShape="RoundRectangle 35" StrokeThickness="3" Padding="20" BackgroundColor="Black">
+                <Grid ColumnSpacing="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="1.2*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label x:Name="NoteTitleLabel" FontSize="15" TextColor="DarkGoldenrod" HorizontalOptions="Start"
+                           VerticalOptions="Center" FontAttributes="Bold"/>
+                    <Line Grid.Row="0" BackgroundColor="Yellow"  VerticalOptions="End" HeightRequest="0.1" Grid.ColumnSpan="2"/>
+                    <Label x:Name="NoteTextLabel" Text="Content" Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Start" TextColor="Grey"/>
+                </Grid>
+            </Border>
+        </VerticalStackLayout>
+        <VerticalStackLayout x:Name="NoNotes" Grid.Column="1" Grid.Row="2" Spacing="10" VerticalOptions="Start" IsVisible="true">
+            <Label Text="Note" HorizontalTextAlignment="Center" TextColor="#0062F0" FontSize="30"/>
+            <Border Stroke="#0062F0" HeightRequest="130" StrokeShape="RoundRectangle 35" StrokeThickness="3" Padding="15" BackgroundColor="Black">
+                <Label Text="No notes yet" FontSize="25" TextColor="DimGray" HorizontalOptions="Center"
+                           VerticalOptions="Center" FontAttributes="Bold"/>
+            </Border>
+        </VerticalStackLayout>
+        <Button x:Name="NotesButton" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Text="View all>" TextColor="DimGrey"
+                BackgroundColor="Transparent" HeightRequest="50" WidthRequest="90" Clicked="NotesButton_Clicked"
+                VerticalOptions="Start" HorizontalOptions="End"/>
+    </Grid>
+
+</ContentPage>

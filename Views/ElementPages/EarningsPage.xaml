@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PersonalManager.Views.ElementPages.EarningsPage"
+             Title="Earnings"
+             Padding="10"
+             BackgroundColor="black"
+             Appearing="ContentPage_Appearing"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Resources>
+        <LinearGradientBrush x:Key="GradientBrush" StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="Green" Offset="0"/>
+            <GradientStop Color="Blue" Offset="3"/>
+        </LinearGradientBrush>
+    </ContentPage.Resources>
+    <ScrollView>
+    <VerticalStackLayout Padding="5" Spacing="10">
+        <Label 
+            Text="All Income"
+            FontSize="30" TextColor="#0062F0"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <!--<Border Stroke="#0062F0" StrokeThickness="3" Padding="15" BackgroundColor="Transparent">-->
+        <Border Stroke="{StaticResource GradientBrush}" StrokeShape="RoundRectangle 25" Padding="20" StrokeThickness="3" BackgroundColor="Transparent">
+        <ListView x:Name="EarningsListView" RowHeight="100" ItemTapped="EarningsListView_ItemTapped"> 
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <!--<TextCell Text="{Binding Title}"
+                                  Detail="{Binding MainActor}"/>-->
+                    <!--<ImageCell
+                            Text="{Binding Title}"
+                            ImageSource="{Binding ImageUrl}"/>-->
+                    <!--<ViewCell>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{Binding Amount}"/>
+                            <Label Text="{Binding EarningCategory}" Grid.Column="1"/>
+                            <Label Text="{Binding Details}" Grid.Row="1" Grid.ColumnSpan="2"/>
+                        </Grid>-->
+                    <ViewCell>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{Binding AmountString}" FontSize="30" VerticalOptions="Center" TextColor="Green"/>
+                            <Label Text="{Binding EarningCategory}" FontSize="20" Grid.Column="1" TextColor="Gray" HorizontalTextAlignment="End" VerticalOptions="Center"/>
+                            <Label Text="{Binding Details}" Grid.Row="1" Grid.ColumnSpan="2" TextColor="Grey"/>
+                            <!--<Line Grid.ColumnSpan="2" HeightRequest="1" BackgroundColor="DimGray" VerticalOptions="Start"/>-->
+                            <Line Grid.ColumnSpan="2" Grid.Row="1" HeightRequest="1" BackgroundColor="DimGray" VerticalOptions="End"/>
+                            </Grid>
+                        <!--<VerticalStackLayout Padding="10">
+                            <HorizontalStackLayout>
+                                <Label Text="{Binding Amount}" FontSize="30"/>
+                                <Label Text="{Binding EarningCategory}" FontSize="30"/>
+                            </HorizontalStackLayout>
+                            <Label Text="{Binding Details}"/>
+                        </VerticalStackLayout>-->
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        </Border>
+    </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

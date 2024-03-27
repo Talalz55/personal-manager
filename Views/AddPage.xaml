@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalProject.Views.AddPage"
+             Title="Add+"
+             BackgroundColor="Black"
+             Padding="20"
+             NavigationPage.HasNavigationBar="False">
+    <VerticalStackLayout Spacing="15">
+        <Border Stroke="#0062F0" StrokeShape="RoundRectangle 50" StrokeThickness="2" Padding="10" BackgroundColor="Black">
+        <Grid>
+        <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+                <Label Text="+" TextColor="DarkRed" FontSize="50" VerticalOptions="Center" HorizontalOptions="Center"/>
+        <Label Text="Expense" Grid.Column="1" FontSize="40" VerticalOptions="Center" TextColor="DarkRed"/>
+        <Button x:Name="ExpenseButton" BackgroundColor="Transparent" Clicked="ExpenseButton_Clicked"
+                                Grid.ColumnSpan="2" Grid.RowSpan="1"></Button>
+        </Grid>
+        </Border>
+
+        <Border Stroke="#0062F0" StrokeShape="RoundRectangle 50" StrokeThickness="2" Padding="10" BackgroundColor="Black">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="4*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="+" TextColor="DarkGreen" FontSize="50" VerticalOptions="Center" HorizontalOptions="Center"/>
+                <Label Text="Earning" Grid.Column="1" FontSize="40" VerticalOptions="Center" TextColor="DarkGreen"/>
+                <Button x:Name="EarningButton" BackgroundColor="Transparent" Clicked="EarningButton_Clicked"
+                                Grid.ColumnSpan="2" Grid.RowSpan="1"></Button>
+            </Grid>
+        </Border>
+
+        <Border Stroke="#0062F0" StrokeShape="RoundRectangle 50" StrokeThickness="2" Padding="10" BackgroundColor="Black">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="4*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="+" TextColor="Orange" FontSize="50" VerticalOptions="Center" HorizontalOptions="Center"/>
+                <Label Text="Note" Grid.Column="1" FontSize="40" VerticalOptions="Center" TextColor="Orange"/>
+                <Button x:Name="NoteButton" BackgroundColor="Transparent" Clicked="NoteButton_Clicked"
+                                Grid.ColumnSpan="2" Grid.RowSpan="1"></Button>
+            </Grid>
+        </Border>
+
+        <Border Stroke="#0062F0" StrokeShape="RoundRectangle 50" StrokeThickness="2" Padding="10" BackgroundColor="Black">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="4*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="+" TextColor="Purple" FontSize="50" VerticalOptions="Center" HorizontalOptions="Center"/>
+                <Label Text="Reminder" Grid.Column="1" FontSize="40" VerticalOptions="Center" TextColor="purple"/>
+                <Button x:Name="ReminderButton" BackgroundColor="Transparent" Clicked="ReminderButton_Clicked"
+                                Grid.ColumnSpan="2" Grid.RowSpan="1"></Button>
+            </Grid>
+        </Border>
+    </VerticalStackLayout>
+</ContentPage>

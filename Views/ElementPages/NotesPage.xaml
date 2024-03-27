@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PersonalManager.Views.ElementPages.NotesPage"
+             Title="NotesPage"
+             Padding="10"
+             BackgroundColor="black"
+             NavigationPage.HasNavigationBar="False"
+             Appearing="ContentPage_Appearing">
+    <ContentPage.Resources>
+        <LinearGradientBrush x:Key="GradientBrush" StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="Orange" Offset="0"/>
+            <GradientStop Color="Blue" Offset="1"/>
+        </LinearGradientBrush>
+    </ContentPage.Resources>
+    <ScrollView>
+        <VerticalStackLayout Padding="5" Spacing="10">
+            <Label 
+            Text="All Notes"
+            FontSize="30" TextColor="#0062F0"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+            <Border Stroke="{StaticResource GradientBrush}" StrokeShape="RoundRectangle 25" Padding="20" StrokeThickness="3" BackgroundColor="Transparent">
+                <ListView x:Name="NotesListView" RowHeight="150" ItemTapped="NotesListView_ItemTapped">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="2*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="6*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding TitleString}" FontSize="20" TextColor="Orange" VerticalOptions="Center" Grid.ColumnSpan="2"/>
+                                    <Label Text="{Binding TextString}" FontSize="15" TextColor="Gray" Grid.Row="1" VerticalOptions="Start"/>
+                                    <Line Grid.ColumnSpan="2" Grid.Row="1" HeightRequest="1" BackgroundColor="DimGray" VerticalOptions="End"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

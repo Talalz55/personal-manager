@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PersonalManager.Views.ElementPages.AddExpensePage"
+             Title="Add Expense"
+             BackgroundColor="Black"
+             Padding="25">
+    <ContentPage.Resources>
+        <LinearGradientBrush x:Key="GradientBrush" StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#0062F0" Offset="0"/>
+            <GradientStop Color="DarkRed" Offset="1"/>
+        </LinearGradientBrush>
+    </ContentPage.Resources>
+    <VerticalStackLayout Spacing="20">
+        <Label Text="Add Expense" FontSize="40" HorizontalOptions="Center" TextColor="#0062F0"/>
+        <Border Stroke="{StaticResource GradientBrush}" StrokeShape="RoundRectangle 25" StrokeThickness="3" Padding="30" 
+                BackgroundColor="Black" MinimumHeightRequest="450">
+            <Grid RowSpacing="30">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="1.5*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                    <Label x:Name="PlusLabel" Text="  -" TextColor="DimGray" FontSize="47"
+                       VerticalOptions="Start" HorizontalOptions="Start"/>
+                    <Border BackgroundColor="Transparent" StrokeShape="RoundRectangle 60" MinimumWidthRequest="230" HeightRequest="60"
+                            Stroke="DimGray" >
+                        <Entry x:Name="AmountEntry" BackgroundColor="Transparent" FontSize="25" Keyboard="Numeric" TextChanged="AmountEntry_TextChanged"
+                               PlaceholderColor="DimGray" TextColor="White" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
+                    </Border>
+                <!--<HorizontalStackLayout Spacing="10">
+                    <Label x:Name="PlusLabel" Text="-" TextColor="DimGray" FontSize="48" Grid.Column="1"
+                       VerticalOptions="Start" HorizontalOptions="Center"/>
+                    <Border BackgroundColor="Transparent" StrokeShape="RoundRectangle 60" MinimumWidthRequest="225" HeightRequest="60"
+                            Stroke="DimGray" >
+                        <Entry x:Name="AmountEntry" BackgroundColor="Transparent" FontSize="20" Keyboard="Numeric" TextChanged="AmountEntry_TextChanged"
+                               PlaceholderColor="DimGray" TextColor="White" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
+                    </Border>
+                </HorizontalStackLayout>-->
+                <VerticalStackLayout Grid.Row="1" Spacing="10">
+                    <Label Text="Choose Category" TextColor="DimGray" HorizontalOptions="Center" FontSize="Large"
+                       VerticalOptions="Center"/>
+                    <Border Stroke="dimgray" BackgroundColor="Transparent" StrokeThickness="1"
+                            StrokeShape="RoundRectangle 60" MinimumWidthRequest="225">
+                        <Picker x:Name="CategoryPicker" HorizontalTextAlignment="Center" VerticalOptions="Center"
+                         TextColor="White" FontSize="20">
+        <!--Housing, Transportation, Food, HealthFitness, PersonalCare, Education, DebtPayments, Insuarance, GiftsDonations, Other-->
+                            <Picker.Items>
+                                <x:String>Food</x:String>
+                                <x:String>Transportation</x:String>
+                                <x:String>Personal Care</x:String>
+                                <x:String>Housing</x:String>
+                                <x:String>Healthcare/Fitness</x:String>
+                                <x:String>Electronics</x:String>
+                                <x:String>Education</x:String>
+                                <x:String>Debt Payments</x:String>
+                                <x:String>Insurance</x:String>
+                                <x:String>Gifts/Donations</x:String>
+                                <x:String>Other</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </Border>
+                </VerticalStackLayout>
+                <Border Grid.Row="2" BackgroundColor="Transparent" Padding="15" StrokeThickness="1" StrokeShape="RoundRectangle 20" Stroke="dimgray">
+                    <Editor x:Name="DetailsEditor" FontSize="Small" Placeholder="Provide some details" PlaceholderColor="DimGrey" WidthRequest="200" TextColor="White"/>
+                </Border>
+            </Grid>
+        </Border>
+        <Button x:Name="AddButton" BackgroundColor="Darkred" Text="Add" CornerRadius="20" FontSize="Medium" Clicked="AddButton_Clicked"/>
+    </VerticalStackLayout>
+</ContentPage>
