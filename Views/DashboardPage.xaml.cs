@@ -1,5 +1,5 @@
-using PersonalManager.Models;
-using PersonalManager.Views.ElementPages;
+using FinalProject.Models;
+using FinalProject.Views.ElementPages;
 
 namespace FinalProject.Views;
 
@@ -37,12 +37,6 @@ public partial class DashboardPage : ContentPage
         DisplayBalance();
         DisplayReminder();
         DisplayNote();        
-        //var balanceCalculation = totalEarnings - totalExpenses;
-        //string balance;
-        //if (balanceCalculation < 0)
-        //{
-        //    string amount = balanceCalculation.ToString();
-        //}
     }
     private void DisplayLastEarning()
     {
@@ -111,7 +105,7 @@ public partial class DashboardPage : ContentPage
     }
     private void DisplayReminder()
     {
-        Reminder reminder = RemindersRepository.GetLastReminder();
+        Reminder reminder = RemindersRepository.GetNearestReminder();
         if (reminder == null) { 
             NoReminders.IsVisible = true;
             YesReminders.IsVisible = false;  

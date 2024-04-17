@@ -1,11 +1,11 @@
-using PersonalManager.Models;
+using FinalProject.Models;
 using Microsoft.Maui.Graphics;
 
 using System.Drawing;
 using static System.Net.Mime.MediaTypeNames;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace PersonalManager.Views.ElementPages;
+namespace FinalProject.Views.ElementPages;
 
 public partial class AddReminderPage : ContentPage
 {

@@ -9,12 +9,8 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <LinearGradientBrush x:Key="PageBackground" StartPoint="0,0" EndPoint="1,1">
-                <GradientStop Color="#75B8FF" Offset="0" />
-                <GradientStop Color="#75B8FF" Offset="0.34"/>
-                <GradientStop Color="#75B8FF" Offset="0.51"/>
-                <GradientStop Color="#082C92" Offset="0.68"/>
-                <GradientStop Color="#0D1F2D" Offset="0.95"/>
-                <GradientStop Color="#0D1F2D" Offset="1"/>
+                <GradientStop Color="GhostWhite" Offset="0" />
+                <GradientStop Color="Beige" Offset="1"/>
             </LinearGradientBrush>
         </ResourceDictionary>
     </ContentPage.Resources>
@@ -22,32 +18,23 @@
     <ContentPage.Background>
         <StaticResource Key="PageBackground" />
     </ContentPage.Background>
-    <VerticalStackLayout>
-        <ListView x:Name="functionsListView"/>
+    <StackLayout Spacing="10">
+        <VerticalStackLayout VerticalOptions="FillAndExpand" Background="Transparent" Padding="20" Spacing="10">
+                <Border StrokeShape="RoundRectangle 90" StrokeThickness="6" Stroke="DarkSlateBlue" Margin="10">
+                    <Image Source="user.png" HeightRequest="130"></Image>
+                </Border>
 
-        <StackLayout Grid.Row="0"
-                             VerticalOptions="Start"
-                             Padding="100"
-                             Margin="0,-15,0,0">
+                <Label x:Name="FirstLabel" Text="First Name" FontSize="Medium" HorizontalOptions="Center" HorizontalTextAlignment="Center"></Label>
+                <Label x:Name="SecondLabel" Text="Last Name" FontSize="Medium" HorizontalOptions="Center" HorizontalTextAlignment="Center"></Label>
+        </VerticalStackLayout>
+        
 
-                    <Image
-                              Source="logo.jpeg"
-                        Opacity="0.8"
-                              Aspect="AspectFill"
-                              Margin="0,0,0,10"
-                              Grid.Column="1"
-                              WidthRequest="200"
-                              HeightRequest="201"
-                              HorizontalOptions="End"
-                              VerticalOptions="Center">
-                          <Image.Clip>
-                              <shapes:EllipseGeometry Center="100, 110"
-                              RadiusX="100"
-                              RadiusY="110"/>
-                          </Image.Clip>
-                    </Image>
-            </StackLayout>
+        <BoxView  HorizontalOptions="FillAndExpand" BackgroundColor="Transparent"/>
+        <Button x:Name="EditButton" Text="Edit"
+                HorizontalOptions="End"
+                VerticalOptions="End"
+                Margin="0,0,20,20"/>
+    </StackLayout>
 
-
-    </VerticalStackLayout>
+    
 </ContentPage>

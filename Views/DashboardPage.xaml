@@ -3,121 +3,157 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FinalProject.Views.DashboardPage"
              Title="Dashboard"
-             BackgroundColor="Black"
              Padding="10"
              NavigationPage.HasNavigationBar="False"
              Appearing="ContentPage_Appearing"
              >
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <LinearGradientBrush x:Key="PageBackground" StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="GhostWhite" Offset="0" />
+                <GradientStop Color="Beige" Offset="1"/>
+            </LinearGradientBrush>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Background>
+        <StaticResource Key="PageBackground" />
+    </ContentPage.Background>
+
     <Grid RowSpacing="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="1.3*"/>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
+            <RowDefinition Height="1.2*" />
+            <RowDefinition Height="1.2*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="11*"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
         <VerticalStackLayout Grid.Column="1" Spacing="10">
-            <Label Text="Finance" HorizontalTextAlignment="Center" TextColor="#0062F0" FontSize="30"/>
-            <Border Stroke="#0062F0" HeightRequest="200" StrokeShape="RoundRectangle 35" StrokeThickness="3" Padding="10" BackgroundColor="Black">
+            <Border Stroke="DarkBlue" HeightRequest="200" StrokeShape="RoundRectangle" StrokeThickness="3" Padding="10" BackgroundColor="White">
                 <Border.Shadow>
                     <Shadow Brush="DarkBlue"
                              Opacity=".6"
-                            Offset="0,15"/>
+                            Offset="0,65"/>
                 </Border.Shadow>
                 <Grid ColumnSpacing="10">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
 
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1.7*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
 
-                <Label x:Name="LastEarningLabel" FontSize="27"  HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>
+                    <Label x:Name="LastEarningLabel" FontSize="27"  HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>
                     <Label x:Name="LastExpenseLabel" FontSize="27"  HorizontalOptions="Center" VerticalOptions="Center"
-                           FontAttributes="Bold" Grid.Column="1"/>
-                <Line Grid.Row="1" BackgroundColor="DimGrey" Grid.ColumnSpan="2" VerticalOptions="Start" HeightRequest="1"/>
-                <Label x:Name="BalanceLabel" FontSize="27"  TextColor="Green" Grid.Row="1" Grid.ColumnSpan="2"
+                           FontAttributes="Bold" Grid.Row="1"/>
+                    <Line Grid.Row="1" BackgroundColor="DimGrey" Grid.ColumnSpan="2" VerticalOptions="Start" HeightRequest="1"/>
+                    <Label x:Name="BalanceLabel" FontSize="27"  TextColor="Green" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="2" Grid.Column="1"
                        HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>
                     <Button x:Name="EarningsButton" BackgroundColor="Transparent" CornerRadius="30" Clicked="EarningsButton_Clicked"></Button>
-                    <Button x:Name="ExpensesButton" BackgroundColor="Transparent" CornerRadius="30" Grid.Column="1" Clicked="ExpensesButton_Clicked"></Button>
+                    <Button x:Name="ExpensesButton" BackgroundColor="Transparent" CornerRadius="30" Grid.Row="1" Clicked="ExpensesButton_Clicked"></Button>
+                    <Label Text="Finance" HorizontalTextAlignment="End" VerticalOptions="End" FontAttributes="Bold"
+                           TextColor="DarkSlateBlue" FontSize="26" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"/>
                 </Grid>
-        </Border>
+            </Border>
+            
         </VerticalStackLayout>
 
         <VerticalStackLayout x:Name="YesReminders" Grid.Column="1" Grid.Row="1" Spacing="10" IsVisible="true">
-            <Label Text="Reminder" HorizontalTextAlignment="Center" TextColor="#0062F0" FontSize="30"/>
-            <Border Stroke="#0062F0" HeightRequest="130" StrokeShape="RoundRectangle 35" StrokeThickness="3" Padding="15" BackgroundColor="Black">
+            
+            <Border Stroke="MediumPurple" HeightRequest="180" StrokeShape="RoundRectangle" StrokeThickness="3" Padding="15" BackgroundColor="White">
+                <Border.Shadow>
+                    <Shadow Brush="MediumPurple"
+             Opacity=".6"
+            Offset="0,65"/>
+                </Border.Shadow>
                 <Grid ColumnSpacing="10">
                     <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
 
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="2.5*"/>
                         <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2.5*"/>
                     </Grid.ColumnDefinitions>
 
                     <Label x:Name="ReminderTitleLabel" Text="+28sWAACJKCCwrerebwave" FontSize="20"  TextColor="MediumPurple" HorizontalOptions="Center" Grid.RowSpan="2"
-                           VerticalOptions="Center" FontAttributes="Bold"/>
+                           VerticalOptions="Center" FontAttributes="Bold" Grid.Column="1"/>
                     <Label x:Name="DateLabel" Text="28 APR" FontSize="16" TextColor="Gray" FontAttributes="Bold"
-                           HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="1"/>
+                           HorizontalOptions="Center" VerticalOptions="Center" />
                     <Line Grid.Row="1" BackgroundColor="DimGrey"  VerticalOptions="Start" HeightRequest="1" Grid.Column="1" />
                     <Line BackgroundColor="DimGrey"  VerticalOptions="Start" WidthRequest="1" Grid.Column="1"
                           HorizontalOptions="Start" Grid.RowSpan="2" />
-                    <Label x:Name="TimeLabel" Text="18:00" FontSize="16"  TextColor="Gray" Grid.Row="1" Grid.Column="1" FontAttributes="Bold"
+                    <Label x:Name="TimeLabel" Text="18:00" FontSize="16"  TextColor="Gray" Grid.Row="1" FontAttributes="Bold"
                        HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Label Text="Reminder" HorizontalTextAlignment="Center" HorizontalOptions="End" VerticalOptions="End"
+                           TextColor="DarkSlateBlue" FontAttributes="Bold" FontSize="26" Grid.Row="2" Grid.Column="1"/>
+                    <Button x:Name="RemindersButton" Text="View all>" TextColor="DimGrey"
+        BackgroundColor="Transparent" HeightRequest="50" WidthRequest="90" Clicked="RemindersButton_Clicked"
+        VerticalOptions="Start" HorizontalOptions="Center" Grid.Row="2"/>
                 </Grid>
             </Border>
         </VerticalStackLayout>
         <VerticalStackLayout x:Name="NoReminders" Grid.Column="1" Grid.Row="1" Spacing="10" IsVisible="false">
-            <Label Text="Reminder" HorizontalTextAlignment="Center" TextColor="#0062F0" FontSize="30"/>
-            <Border Stroke="#0062F0" HeightRequest="130" StrokeShape="RoundRectangle 35" StrokeThickness="3" Padding="15" BackgroundColor="Black">
+            <Border Stroke="MediumPurple" HeightRequest="180" StrokeShape="RoundRectangle" StrokeThickness="3" 
+                    Padding="15" BackgroundColor="GhostWhite">
                 <Label Text="No reminders yet" FontSize="25" TextColor="DimGray" HorizontalOptions="Center"
                            VerticalOptions="Center" FontAttributes="Bold"/>
             </Border>
         </VerticalStackLayout>
-        <Button x:Name="RemindersButton" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Text="View all>" TextColor="DimGrey"
-                BackgroundColor="Transparent" HeightRequest="50" WidthRequest="90" Clicked="RemindersButton_Clicked"
-                VerticalOptions="Start" HorizontalOptions="End"/>
-
+        
         <VerticalStackLayout x:Name="YesNotes" Grid.Column="1" Grid.Row="2" Spacing="10" VerticalOptions="Start" IsVisible="false">
-            <Label Text="Note" HorizontalTextAlignment="Center" TextColor="#0062F0" FontSize="30"/>
-            <Border Stroke="#0062F0" HeightRequest="130" StrokeShape="RoundRectangle 35" StrokeThickness="3" Padding="20" BackgroundColor="Black">
+            <Border Stroke="DarkGoldenrod" HeightRequest="180" StrokeShape="RoundRectangle" StrokeThickness="3" 
+                    Padding="20" BackgroundColor="White">
+                <Border.Shadow>
+                    <Shadow Brush="DarkGoldenrod"
+ Opacity=".6"
+Offset="0,65"/>
+                </Border.Shadow>
                 <Grid ColumnSpacing="10">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="1.2*"/>
+                        <RowDefinition Height="1.2*"/>
                     </Grid.RowDefinitions>
 
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="1.2*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
                     </Grid.ColumnDefinitions>
 
-                    <Label x:Name="NoteTitleLabel" FontSize="15" TextColor="DarkGoldenrod" HorizontalOptions="Start"
+                    <Label x:Name="NoteTitleLabel" FontSize="15" TextColor="DarkGoldenrod" HorizontalOptions="Start" Grid.ColumnSpan="2"
                            VerticalOptions="Center" FontAttributes="Bold"/>
                     <Line Grid.Row="0" BackgroundColor="Yellow"  VerticalOptions="End" HeightRequest="0.1" Grid.ColumnSpan="2"/>
-                    <Label x:Name="NoteTextLabel" Text="Content" Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Start" TextColor="Grey"/>
+                    <Label x:Name="NoteTextLabel" Text="Content" Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Start" 
+                           Grid.ColumnSpan="2" TextColor="Grey"/>
+                    <Label Text="Note" HorizontalTextAlignment="Center" TextColor="DarkSlateBlue" FontAttributes="Bold" Grid.Row="2" Grid.ColumnSpan="2"
+                           HorizontalOptions="End" VerticalOptions="End" Grid.Column="1" FontSize="26"/>
+                    <Button x:Name="NotesButton" Grid.Row="2" Grid.Column="0" Text="View all>" TextColor="DimGrey"
+        BackgroundColor="Transparent" HeightRequest="50" WidthRequest="90" Clicked="NotesButton_Clicked"
+        VerticalOptions="Start" HorizontalOptions="Center"/>
                 </Grid>
             </Border>
         </VerticalStackLayout>
         <VerticalStackLayout x:Name="NoNotes" Grid.Column="1" Grid.Row="2" Spacing="10" VerticalOptions="Start" IsVisible="true">
-            <Label Text="Note" HorizontalTextAlignment="Center" TextColor="#0062F0" FontSize="30"/>
-            <Border Stroke="#0062F0" HeightRequest="130" StrokeShape="RoundRectangle 35" StrokeThickness="3" Padding="15" BackgroundColor="Black">
+            <Border Stroke="DarkGoldenrod" HeightRequest="180" StrokeShape="RoundRectangle" StrokeThickness="3" 
+                    Padding="15" BackgroundColor="GhostWhite">
                 <Label Text="No notes yet" FontSize="25" TextColor="DimGray" HorizontalOptions="Center"
                            VerticalOptions="Center" FontAttributes="Bold"/>
             </Border>
         </VerticalStackLayout>
-        <Button x:Name="NotesButton" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Text="View all>" TextColor="DimGrey"
-                BackgroundColor="Transparent" HeightRequest="50" WidthRequest="90" Clicked="NotesButton_Clicked"
-                VerticalOptions="Start" HorizontalOptions="End"/>
+        
     </Grid>
 
 </ContentPage>

@@ -1,5 +1,6 @@
-namespace PersonalManager.Views.ElementPages;
-using PersonalManager.Models;
+using FinalProject.Models;
+
+namespace FinalProject.Views.ElementPages;
 
 public partial class AddEarningPage : ContentPage
 {

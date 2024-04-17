@@ -6,12 +6,24 @@
            NavigationPage.HasNavigationBar="False"
              Appearing="ContentPage_Appearing"
              Padding="5"
-             BackgroundColor="Black"
              >
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <LinearGradientBrush x:Key="PageBackground" StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="GhostWhite" Offset="0" />
+                <GradientStop Color="Beige" Offset="1"/>
+            </LinearGradientBrush>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Background>
+        <StaticResource Key="PageBackground" />
+    </ContentPage.Background>
     <ScrollView>
         <VerticalStackLayout Spacing="10">
-        <Label Text="Report" VerticalOptions="Center" HorizontalOptions="Center" FontSize="33" TextColor="#0062F0"/>
-            <Border Stroke="#0062F0" HeightRequest="330" StrokeShape="RoundRectangle 35" StrokeThickness="3" Padding="20" BackgroundColor="Black">
+        <Label Text="Report" VerticalOptions="Center" HorizontalOptions="Center" FontSize="33" TextColor="DarkSlateBlue"/>
+            <Border Stroke="DarkBlue" HeightRequest="330" StrokeShape="RoundRectangle" StrokeThickness="3" Padding="20" BackgroundColor="White">
             <Border.Shadow>
                 <Shadow Brush="DarkBlue"
                              Opacity=".6" 
@@ -62,7 +74,7 @@
                 </Grid>
         </Border>
 
-            <Border Stroke="#0062F0" HeightRequest="250" StrokeShape="RoundRectangle 35" StrokeThickness="3" Padding="20" BackgroundColor="Black">
+            <Border Stroke="DarkBlue" HeightRequest="250" StrokeShape="RoundRectangle" StrokeThickness="3" Padding="20" BackgroundColor="White">
                 <Border.Shadow>
                     <Shadow Brush="DarkBlue"
                              Opacity=".6" 

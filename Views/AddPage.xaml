@@ -3,11 +3,24 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FinalProject.Views.AddPage"
              Title="Add+"
-             BackgroundColor="Black"
              Padding="20"
              NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <LinearGradientBrush x:Key="PageBackground" StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="GhostWhite" Offset="0" />
+                <GradientStop Color="Beige" Offset="1"/>
+            </LinearGradientBrush>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Background>
+        <StaticResource Key="PageBackground" />
+    </ContentPage.Background>
+
     <VerticalStackLayout Spacing="15">
-        <Border Stroke="#0062F0" StrokeShape="RoundRectangle 50" StrokeThickness="2" Padding="10" BackgroundColor="Black">
+        <Border Stroke="DarkBlue" StrokeShape="RoundRectangle" StrokeThickness="4" Padding="10" BackgroundColor="FloralWhite">
         <Grid>
         <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
@@ -23,7 +36,7 @@
         </Grid>
         </Border>
 
-        <Border Stroke="#0062F0" StrokeShape="RoundRectangle 50" StrokeThickness="2" Padding="10" BackgroundColor="Black">
+        <Border Stroke="DarkBlue" StrokeShape="RoundRectangle" StrokeThickness="4" Padding="10" BackgroundColor="FloralWhite">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
@@ -39,7 +52,7 @@
             </Grid>
         </Border>
 
-        <Border Stroke="#0062F0" StrokeShape="RoundRectangle 50" StrokeThickness="2" Padding="10" BackgroundColor="Black">
+        <Border Stroke="DarkBlue" StrokeShape="RoundRectangle" StrokeThickness="4" Padding="10" BackgroundColor="FloralWhite">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
@@ -55,7 +68,7 @@
             </Grid>
         </Border>
 
-        <Border Stroke="#0062F0" StrokeShape="RoundRectangle 50" StrokeThickness="2" Padding="10" BackgroundColor="Black">
+        <Border Stroke="DarkBlue" StrokeShape="RoundRectangle" StrokeThickness="4" Padding="10" BackgroundColor="FloralWhite">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>

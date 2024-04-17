@@ -57,13 +57,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
-		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
-		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
+	  <None Remove="Resources\Images\add.png" />
+	  <None Remove="Resources\Images\dash.png" />
+	  <None Remove="Resources\Images\money.png" />
+	  <None Remove="Resources\Images\user.png" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Models\" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
+		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>

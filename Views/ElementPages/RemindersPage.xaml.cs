@@ -1,8 +1,8 @@
 using Microsoft.Maui.Controls;
 using Microsoft.Maui.Graphics;
-using PersonalManager.Models;
+using FinalProject.Models;
 
-namespace PersonalManager.Views.ElementPages;
+namespace FinalProject.Views.ElementPages;
 
 public partial class RemindersPage : ContentPage
 {

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PersonalManager.Views.ElementPages.RemindersPage"
+             x:Class="FinalProject.Views.ElementPages.RemindersPage"
              Title="RemindersPage"
              Padding="10"
-             BackgroundColor="Black"
+             BackgroundColor="GhostWhite"
              Appearing="ContentPage_Appearing"
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Resources>
@@ -17,10 +17,11 @@
         <VerticalStackLayout Padding="5" Spacing="10">
             <Label 
             Text="All Reminders"
-            FontSize="30" TextColor="#0062F0"
+            FontSize="30" TextColor="DarkSlateBlue"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-            <Border Stroke="{StaticResource GradientBrush}" StrokeShape="RoundRectangle 25" Padding="20" StrokeThickness="3" BackgroundColor="Transparent">
+            <Border Stroke="{StaticResource GradientBrush}" StrokeShape="RoundRectangle -5" 
+                    Padding="20" StrokeThickness="4" BackgroundColor="Transparent">
                 <ListView x:Name="RemindersListView" RowHeight="150" ItemTapped="RemindersListView_ItemTapped">
                     <ListView.ItemTemplate>
                         <DataTemplate>

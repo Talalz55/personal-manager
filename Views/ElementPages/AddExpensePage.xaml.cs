@@ -1,9 +1,7 @@
-
 using Microsoft.Maui.Controls;
-using PersonalManager.Models;
 
-
-namespace PersonalManager.Views.ElementPages;
+using FinalProject.Models;
+namespace FinalProject.Views.ElementPages;
 
 public partial class AddExpensePage : ContentPage
 {
