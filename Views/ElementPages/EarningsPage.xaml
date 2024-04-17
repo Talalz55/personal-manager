@@ -4,7 +4,6 @@
              x:Class="FinalProject.Views.ElementPages.EarningsPage"
              Title="Earnings"
              Padding="10"
-             BackgroundColor="GhostWhite"
              Appearing="ContentPage_Appearing"
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Resources>
@@ -13,6 +12,9 @@
             <GradientStop Color="Blue" Offset="3"/>
         </LinearGradientBrush>
     </ContentPage.Resources>
+    <ContentPage.Background>
+        <StaticResource Key="PageBackground" />
+    </ContentPage.Background>
     <ScrollView>
     <VerticalStackLayout Padding="5" Spacing="10">
         <Label 

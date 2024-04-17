@@ -13,6 +13,9 @@
             <GradientStop Color="Blue" Offset="1"/>
         </LinearGradientBrush>
     </ContentPage.Resources>
+    <ContentPage.Background>
+        <StaticResource Key="PageBackground" />
+    </ContentPage.Background>
     <ScrollView>
         <VerticalStackLayout Padding="5" Spacing="10">
             <Label 

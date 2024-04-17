@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FinalProject.Views.ProfilePage"
               xmlns:shapes="clr-namespace:Microsoft.Maui.Controls.Shapes;assembly=Microsoft.Maui.Controls"
-             Title="ProfilePage"
+             Title="Profile"
              NavigationPage.HasNavigationBar="False">
 
     <ContentPage.Resources>
@@ -31,9 +31,9 @@
 
         <BoxView  HorizontalOptions="FillAndExpand" BackgroundColor="Transparent"/>
         <Button x:Name="EditButton" Text="Edit"
-                HorizontalOptions="End"
+                HorizontalOptions="End" BackgroundColor="DarkSlateBlue"
                 VerticalOptions="End"
-                Margin="0,0,20,20"/>
+                Margin="0,0,20,20" Clicked="EditButton_Clicked"/>
     </StackLayout>
 
     

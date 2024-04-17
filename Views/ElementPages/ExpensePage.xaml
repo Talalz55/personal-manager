@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FinalProject.Views.ElementPages.ExpensePage"
              Title="Info"
-             BackgroundColor="GhostWhite"
              Padding="30"
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Resources>
@@ -14,6 +13,9 @@
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
+    <ContentPage.Background>
+        <StaticResource Key="PageBackground" />
+    </ContentPage.Background>
     <VerticalStackLayout Spacing="30">
         <Label 
             x:Name="AmountLabel"

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalProject.Views.SettingsPage"
+             Title="Settings">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <LinearGradientBrush x:Key="PageBackground" StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="GhostWhite" Offset="0" />
+                <GradientStop Color="Beige" Offset="1"/>
+            </LinearGradientBrush>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Background>
+        <StaticResource Key="PageBackground" />
+    </ContentPage.Background>
+    <VerticalStackLayout>
+        <Label 
+            Text="Settings" FontSize="Large"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Frame CornerRadius="5" Margin="10">
+            <VerticalStackLayout Spacing="10">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="First Name: " VerticalTextAlignment="Center" />
+                    <Entry x:Name="FirstNameEntry" HorizontalOptions="FillAndExpand" />
+                    <Button x:Name="FirstButton" Text="Save" BackgroundColor="DarkSlateBlue" Clicked="FirstButton_Clicked"></Button>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Last Name: " VerticalTextAlignment="Center"/>
+                    <Entry x:Name="LastNameEntry" HorizontalOptions="FillAndExpand"/>
+                    <Button x:Name="SecondButton" Text="Save" BackgroundColor="DarkSlateBlue" Clicked="SecondButton_Clicked"></Button>
+                </StackLayout>
+            </VerticalStackLayout>
+        </Frame>
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="BackButton" HorizontalOptions="FillAndExpand" BackgroundColor="DarkSlateBlue"
+                    Text="Go Back" Clicked="BackButton_Clicked"></Button>
+        </StackLayout>
+    </VerticalStackLayout>
+</ContentPage>

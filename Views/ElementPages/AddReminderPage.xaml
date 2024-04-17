@@ -11,6 +11,9 @@
             <GradientStop Color="Purple" Offset="1"/>
         </LinearGradientBrush>
     </ContentPage.Resources>
+    <ContentPage.Background>
+        <StaticResource Key="PageBackground" />
+    </ContentPage.Background>
     <VerticalStackLayout Spacing="20">
         <Label Text="Add Note" FontSize="40" HorizontalOptions="Center" TextColor="DarkSlateBlue"/>
         <Border Stroke="{StaticResource GradientBrush}" StrokeShape="RoundRectangle -10" StrokeThickness="4" 

@@ -11,6 +11,9 @@
             <GradientStop Color="DarkRed" Offset="1"/>
         </LinearGradientBrush>
     </ContentPage.Resources>
+    <ContentPage.Background>
+        <StaticResource Key="PageBackground" />
+    </ContentPage.Background>
     <VerticalStackLayout Spacing="20">
         <Label Text="Add Expense" FontSize="40" HorizontalOptions="Center" TextColor="DarkSlateBlue"/>
         <Border Stroke="{StaticResource GradientBrush}" StrokeShape="RoundRectangle -10" StrokeThickness="4" Padding="30" 
