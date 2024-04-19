@@ -9,21 +9,6 @@ public partial class SettingsPage : ContentPage
 		InitializeComponent();
 	}
 
-    private void SaveButton_Clicked(object sender, EventArgs e)
-    {
-		var firstName = FirstNameEntry.Text;
-		var lastName = LastNameEntry.Text;
-		if (firstName == null || lastName == null)
-		{
-            DisplayAlert("Error", "Empty input!", "OK");
-            return;
-        }
-
-		User.FirstName = firstName;
-		User.LastName = lastName;
-		Navigation.PopAsync();
-    }
-
     private void FirstButton_Clicked(object sender, EventArgs e)
     {
         var firstName = FirstNameEntry.Text;

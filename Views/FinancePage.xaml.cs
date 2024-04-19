@@ -2,19 +2,10 @@ using FinalProject.Models;
 namespace FinalProject.Views;
 public partial class FinancePage : ContentPage
 {
-    //public DateTime(int year, int month, int day, int hour, int minute, int second)
     public FinancePage()
 	{
 		InitializeComponent();
 
-        //double total = 10;
-        //double food = 4;
-
-        //double foodPercentage = 4 % 10;
-        //TestLabel.Text = foodPercentage.ToString();
-
-        //double foodP = (4 * 0.1 / 20) * 1000;
-        //Test2Label.Text = foodP.ToString() + "%";
 
     }
 
@@ -46,11 +37,6 @@ public partial class FinancePage : ContentPage
         Income4Label.Text = incomePercentages[3].Description;
         Income5Label.Text = incomePercentages[4].Description;
         Income6Label.Text = incomePercentages[5].Description;
-
-
-
-        //TestLabel.Text = housing[10].Description;
-        //Test2Label.Text = housing[9].Description;
     }
 
 }

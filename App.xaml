@@ -5,13 +5,6 @@
              x:Class="FinalProject.App">
     <Application.Resources>
         <ResourceDictionary>
-            <LinearGradientBrush x:Key="PageBackground" StartPoint="0,0" EndPoint="1,1">
-                <GradientStop Color="GhostWhite" Offset="0" />
-                <GradientStop Color="Beige" Offset="1"/>
-            </LinearGradientBrush>
-            <Style TargetType="ContentPage">
-                <Setter Property="Background" Value="{StaticResource PageBackground}" />
-            </Style>
         </ResourceDictionary>
 
     </Application.Resources>

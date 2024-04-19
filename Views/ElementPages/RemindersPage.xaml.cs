@@ -17,20 +17,6 @@ public partial class RemindersPage : ContentPage
         RemindersListView.SelectedItem= null;
     }
 
-    //private void RemindersListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
-    //{
-    //    RemindersListView.SelectedItem.
-    //    //((Reminder)e.SelectedItem).
-
-    //    ((ListView)sender).SelectedItem = null;
-    //}
-
-    //private void RemindersListView_ItemTapped(object sender, ItemTappedEventArgs e)
-    //{
-
-    //}
-
-
     private void RemindersListView_ItemTapped(object sender, ItemTappedEventArgs e)
     {
         

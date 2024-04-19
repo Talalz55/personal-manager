@@ -11,14 +11,9 @@
             <GradientStop Color="#0062F0" Offset="0"/>
             <GradientStop Color="DarkGreen" Offset="1"/>
         </LinearGradientBrush>
-        <LinearGradientBrush x:Key="PageBackground" StartPoint="0,0" EndPoint="1,1">
-            <GradientStop Color="GhostWhite" Offset="0" />
-            <GradientStop Color="Beige" Offset="1"/>
-        </LinearGradientBrush>
+        
     </ContentPage.Resources>
-    <ContentPage.Background>
-        <StaticResource Key="PageBackground" />
-    </ContentPage.Background>
+   
     <VerticalStackLayout Spacing="20">
         <Label Text="Add Earning" FontSize="40" HorizontalOptions="Center" TextColor="DarkSlateBlue"/>
         <Border Stroke="{StaticResource GradientBrush}" StrokeShape="RoundRectangle -10" StrokeThickness="4" Padding="30" BackgroundColor="White" MinimumHeightRequest="450">
@@ -38,15 +33,6 @@
                     <Entry x:Name="AmountEntry" BackgroundColor="Transparent" FontSize="25" Keyboard="Numeric" TextChanged="AmountEntry_TextChanged"
                                PlaceholderColor="DimGray" TextColor="DarkSlateBlue" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
                 </Border>
-                <!--<HorizontalStackLayout Spacing="10">
-                    <Label Text="+" TextColor="DimGray" FontSize="40"
-                       VerticalOptions="Center" HorizontalOptions="Center"/>
-                    <Border BackgroundColor="Transparent" StrokeShape="RoundRectangle 60" MinimumWidthRequest="225" HeightRequest="60"
-                            Stroke="DimGray" >
-                        <Entry BackgroundColor="Transparent" FontSize="20" Keyboard="Numeric"
-                               PlaceholderColor="DimGray" TextColor="White" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
-                    </Border>
-                </HorizontalStackLayout>-->
                 <VerticalStackLayout Grid.Row="1" Spacing="10">
                     <Label Text="Choose Category" TextColor="DimGray" HorizontalOptions="Center" FontSize="Large"
                        VerticalOptions="Center"/>

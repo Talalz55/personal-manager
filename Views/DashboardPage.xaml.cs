@@ -10,26 +10,6 @@ public partial class DashboardPage : ContentPage
 		InitializeComponent();
 	}
 
-    private void EarningsButton_Clicked(object sender, EventArgs e)
-    {
-		Navigation.PushAsync(new EarningsPage());
-    }
-
-    private void ExpensesButton_Clicked(object sender, EventArgs e)
-    {
-        Navigation.PushAsync(new ExpensesPage()); 
-    }
-
-    private void RemindersButton_Clicked(object sender, EventArgs e)
-    {
-        Navigation.PushAsync(new RemindersPage());
-    }
-
-    private void NotesButton_Clicked(object sender, EventArgs e)
-    {
-        Navigation.PushAsync(new NotesPage());
-    }
-
     private void ContentPage_Appearing(object sender, EventArgs e)
     {
         DisplayLastEarning();
@@ -142,5 +122,25 @@ public partial class DashboardPage : ContentPage
             NoteTextLabel.Text = text;
         }
         
+    }
+
+    private void EarningsButton_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new EarningsPage());
+    }
+
+    private void ExpensesButton_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new ExpensesPage());
+    }
+
+    private void RemindersButton_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new RemindersPage());
+    }
+
+    private void NotesButton_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new NotesPage());
     }
 }

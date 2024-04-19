@@ -115,9 +115,6 @@
             </Border>
 
 
-            <!--<Label x:Name="TestLabel" Text="hi" VerticalOptions="Center" HorizontalOptions="Center"/>
-        <Label x:Name="Test2Label" Text="hi" VerticalOptions="Center" HorizontalOptions="Center"/>-->
-
     </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
